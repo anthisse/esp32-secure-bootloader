@@ -1,4 +1,4 @@
-# Milestone 2: Toolchain Configuration & Example Project Setup
+# Milestone 1: Toolchain Configuration & Example Project Setup
 
 ## Abstract
 
