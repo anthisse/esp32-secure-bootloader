@@ -8,25 +8,26 @@ The goal of this project is to demonstrate and experiment with the BootROM capab
 
 ## Roadmap
 
-1. Gather all of the parts for the project according to [this Amazon list](https://www.amazon.com/hz/wishlist/ls/JVE4DMFIOHV?ref_=wl_share)
-    - ⭐ We are here!
+1. Gather all the parts for the project according to [this Amazon list](https://www.amazon.com/hz/wishlist/ls/JVE4DMFIOHV?ref_=wl_share)
 
-1. Configure the toolchain
+2. Configure the toolchain
     - Install ESP-IDF
-    - Determine how the USB port is wired to get into download mode rather than flashing the entire thing from a computer
     - This will be considered completed when an [example program from the ESP IDF repository](https://github.com/espressif/esp-idf/tree/master/examples/get-started) is able to run successfully.
 
-1. Partitioning
-    - Determine the partition layout
-        - OTA data
-        - OTA slot 0 & 1
-        - Metadata partition
-        - Storage partition
-    - Flash a different program to each partition (LED blinker, UART dump, LCD colors)
-        - Use `esptool` or `parttool`? Need to do more research
-            - [ESP32 docs on partitions](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/partition-tables.html)
-    - Optionally, a shared `include/` or `share/` directory between slots might be nice to have
-    - This will be considered completed when both programs are able to be booted manually, logs appear over UART, and `idf.py partition-table` shows the correct layout
+3. Partitioning
+
+- ⭐ We are here!
+- Determine how the USB port is wired to get into download mode rather than flashing the entire thing from a computer
+  - Determine the partition layout
+    - OTA data
+    - OTA slot 0 & 1
+    - Metadata partition
+    - Storage partition
+  - Flash a different program to each partition (LED blinker, UART dump, LCD colors)
+    - Use `esptool` or `parttool`? Need to do more research
+      - [ESP32 docs on partitions](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/partition-tables.html)
+  - Optionally, a shared `include/` or `share/` directory between slots might be nice to have
+  - This will be considered completed when both programs are able to be booted manually, logs appear over UART, and `idf.py partition-table` shows the correct layout
 
 1. Slot selection and custom bootloader draft
     - Use some functions from within an application to watch the `otadata` change
@@ -167,4 +168,6 @@ Check the [Amazon list.](https://www.amazon.com/hz/wishlist/ls/JVE4DMFIOHV?ref_=
 
 1. Install ESP IDF.
 
-    - On Arch Linux, you may find [this guide](https://wiki.archlinux.org/title/ESP32) useful.
+    - Follow Espressif's [Get Started Guide.](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#)
+    - If you want to build from source on Arch Linux, you may find [this guide](https://wiki.archlinux.org/title/ESP32) useful. Note that the AUR package as of 2026-10-17 installs ESP IDF 6.0.2 instead of the latest 6.1 release. Alternatively, follow the Arch Linux installation guide found [here.](https://docs.espressif.com/projects/idf-im-ui/en/latest/#arch-linux-installation-via-pacman-repository)
+    - Note that I will be using [CLion's integration with ESP IDF and PlatformIO](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/third-party-tools/clion.html) to develop for this project.
