@@ -13,7 +13,7 @@ The goal of this project is to demonstrate and experiment with the BootROM capab
     - This will be considered completed when an [example program from the ESP IDF repository](https://github.com/espressif/esp-idf/tree/master/examples/get-started) is able to run successfully.
 
 2. Partitioning
-
+    - ⭐ We are here!
     - Determine how the USB port is wired to get into download mode rather than flashing the entire thing from a computer
     - Determine the partition layout
     - OTA data
