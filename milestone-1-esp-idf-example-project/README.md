@@ -64,7 +64,7 @@ If you make a configuration for the IDF monitor and you're happy with CLion havi
 
 - `picocom -b 115200 /dev/ttyACM0`
 
-When making the configuration for the IDF monitor, it might be a good idea to put `export IDF_PATH=~/esp/v6.1/esp-idf` or similar so that you don't need to export it for every project's setup, though this is just for convenience.
+When making the configuration for the IDF monitor, it might be a good idea to put `export IDF_PATH=~/esp/v6.1/esp-idf` or similar into your `.bashrc` or `zsh.rc` so that you don't need to export it for every project's setup, though this is just for convenience.
 
 Here's an example of my setup for the monitor, which runs out of this directory. If you decide to run the project from this directory instead of the `hello_world` directory, you'll need to right-click `hello_world/CMakeLists.txt` in CLion's file explorer and click "Load CMake Project".
 
