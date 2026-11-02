@@ -1,0 +1,6 @@
+# CMake files for this project
+
+build_a/
+build_b/
+cmake-build-debug/
+
