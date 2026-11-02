@@ -70,3 +70,5 @@ build/
 
 # ESP IDF files
 sdkconfig
+sdkconfig.defaults
+sdkconfig.old
