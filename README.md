@@ -13,7 +13,6 @@ The goal of this project is to demonstrate and experiment with the BootROM capab
     - This will be considered completed when an [example program from the ESP IDF repository](https://github.com/espressif/esp-idf/tree/master/examples/get-started) is able to run successfully.
 
 2. Partitioning
-    - ⭐ We are here!
     - Determine how the USB port is wired to get into download mode rather than flashing the entire thing from a computer
     - Write a custom `partitions.csv` with:
         - `otadata`
@@ -30,6 +29,7 @@ The goal of this project is to demonstrate and experiment with the BootROM capab
     - This will be considered completed when both programs are able to be booted manually, logs appear over UART, and `idf.py partition-table` shows the correct layout
 
 3. Stock OTA and rollback baseline
+    - ⭐ We are here!
     - Before writing any custom bootloader code, get ESP-IDF's built-in A/B update and rollback working.
         - We'll compare against this for any new bootloader code later
     - Use some functions from within an application to switch slots and watch the `otadata` change
